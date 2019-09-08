@@ -1,0 +1,141 @@
+/* css reset */
+*{
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+ul, ol{
+  list-style: none;
+}
+a{
+  text-decoration: none; color: inherit;
+}
+img{
+  max-width: 100%;
+}
+
+/* page styles */
+div.page{
+  background: url('img/geometry2.png');
+}
+
+div.summary{
+  min-height: 20vh;
+  background: rgba(240, 240, 240, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.summary img{
+  width: 108px;
+  margin: 0 30px;
+}
+
+div.summary .text,
+div.works > ul h3,
+div.skills > ol,
+div.contacts > dl{
+  font-size: 12px;
+  line-height: 2;
+}
+div.summary .text{
+  text-align: center;
+  margin: 0 20px;
+}
+
+div.works{
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.works img{
+  max-width: 120px;
+}
+
+div.works img:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+div.works .imageWrapper{
+  margin: 0 10px;
+  padding-bottom: 4px;
+  /* border-radius: 5px; */
+  box-shadow: 2px 2px 10px #aaa;
+  overflow: hidden;
+}
+
+  /* box-shadow: 2px 2px 5px #aaf;
+  box-shadow: 2px 2px 5px #faa;
+  box-shadow: 2px 2px 5px #faf;
+  box-shadow: 2px 2px 5px #aff; */
+
+div.works > ul{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  justify-content: space-between;
+}
+
+div.works > ul h3{
+  font-weight: normal;
+  text-align: center;
+}
+
+div.works > h2{
+  padding-bottom: 35px;
+}
+
+div.skills{
+  min-height: 30vh;
+  background: rgba(240, 240, 240, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.skills > h2{
+  padding-bottom: 20px;
+}
+
+div.skills > ol{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.skills > ol > li{
+  max-width: 120px;
+  margin: 0 10px;
+  padding: 10px 8px;
+  border: 2px #ccc solid;
+  text-align: center;
+}
+
+div.contacts{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.contacts > h2{
+  padding-bottom: 15px;
+}
+
+div.contacts > dl{
+  display: flex;
+  flex-wrap: wrap;
+  width: 12em;
+}
+
+div.contacts > dl > dt{
+  width: 3em;
+}
+
+div.contacts > dl > dd{
+  width: 9em;
+}
