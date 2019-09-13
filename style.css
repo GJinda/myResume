@@ -29,7 +29,7 @@ section.summary{
   align-items: center;
 }
 
-@media (max-width: 1080px){
+@media screen and (max-width: 460px){
   section.summary{
     min-height: 100vh;
     flex-direction: column;
@@ -42,9 +42,15 @@ section.summary img{
   border-radius: 5px;
 }
 
-@media (max-width: 1080px){
+@media screen and (max-width: 460px){
   section.summary img{
     margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 560px){
+  section.summary img{
+    margin: 20px 15px;
   }
 }
 
@@ -71,6 +77,12 @@ section.summary .text{
   margin: 20px 30px;
 }
 
+@media screen and (max-width: 560px){
+  section.summary .text{
+    margin: 20px 10px;
+  }
+}
+
 section.summary p{
   max-width: 8em;
 }
@@ -78,6 +90,12 @@ section.summary p{
 section.summary .contact{
   align-items: center;
   margin: 20px 30px;
+}
+
+@media screen and (max-width: 560px){
+  section.summary .contact{
+    margin: 20px 10px;
+  }
 }
 
 section.summary dl{
@@ -115,7 +133,7 @@ section.experi{
   flex-direction: column;
 }
 
-@media (max-width: 1080px){
+@media screen and (max-width: 460px){
   section.experi{
     min-height: 100vh;
     flex-direction: column;
@@ -152,10 +170,10 @@ section.experi > ul{
 }
 
 section.experi > ul > li{
-  max-width: 135px;
+  max-width: 140px;
 }
 
-@media (max-width: 1080px){
+@media screen and (max-width: 460px){
   section.experi > ul > li{
     margin: 20px 0;
   }
@@ -202,7 +220,7 @@ section.works{
   flex-direction: column;
 }
 
-@media (max-width: 1080px){
+@media screen and (max-width: 460px){
   section.works{
     min-height: 100vh;
     flex-direction: column;
@@ -277,7 +295,7 @@ section.skills{
   flex-direction: column;
 }
 
-@media (max-width: 1080px){
+@media screen and (max-width: 460px){
   section.skills{
     min-height: 100vh;
     flex-direction: column;
