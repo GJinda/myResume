@@ -29,7 +29,7 @@ section.summary{
   align-items: center;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 480px){
   section.summary{
     min-height: 100vh;
     flex-direction: column;
@@ -42,7 +42,7 @@ section.summary img{
   border-radius: 5px;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 480px){
   section.summary img{
     margin: 20px 0;
   }
@@ -133,7 +133,7 @@ section.experi{
   flex-direction: column;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 480px){
   section.experi{
     min-height: 100vh;
     flex-direction: column;
@@ -173,9 +173,9 @@ section.experi > ul > li{
   max-width: 140px;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 480px){
   section.experi > ul > li{
-    margin: 20px 0;
+    margin: 20px;
   }
 }
 
@@ -220,7 +220,7 @@ section.works{
   flex-direction: column;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 480px){
   section.works{
     min-height: 100vh;
     flex-direction: column;
@@ -271,6 +271,12 @@ section.works > ul > li{
   transition: .3s;
 }
 
+@media screen and (max-width: 480px){
+  section.works > ul > li{
+    margin: 20px;
+  }
+}
+
 section.works > ul > li:hover{
   opacity: 0.9;
   cursor: pointer;
@@ -295,7 +301,7 @@ section.skills{
   flex-direction: column;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 480px){
   section.skills{
     min-height: 100vh;
     flex-direction: column;
@@ -327,6 +333,12 @@ section.skills > ol > li{
   background: #e8eaf650;
   transition: .1s;
   text-align: center;
+}
+
+@media screen and (max-width: 480px){
+  section.skills > ol > li{
+    margin: 20px;
+  }
 }
 
 section.skills .text{
