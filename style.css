@@ -11,131 +11,312 @@ a{
 img{
   max-width: 100%;
 }
+h1,h2,h3{
+  color: #333;
+}
 
 /* page styles */
-div.page{
+body{
   background: url('img/geometry2.png');
 }
 
-div.summary{
+/* summary */
+section.summary{
   min-height: 20vh;
-  background: rgba(240, 240, 240, 0.4);
+  background: #e8eaf640;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-div.summary img{
-  width: 108px;
-  margin: 0 30px;
+@media (max-width: 420px){
+  section.summary{
+    min-height: 100vh;
+    flex-direction: column;
+  }
 }
 
-div.summary .text,
-div.works > ul h3,
-div.skills > ol,
-div.contacts > dl{
+section.summary img{
+  height: 156px;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+
+@media (max-width: 420px){
+  section.summary img{
+    margin: 20px 0;
+  }
+}
+
+section.summary h1{
+  text-align: center;
+}
+
+section.summary .text,
+section.summary .contact,
+section.summary i,
+section.experi .text,
+section.skills > ol,
+section.contacts > dl{
   font-size: 12px;
   line-height: 2;
+  color: #666;
 }
-div.summary .text{
-  text-align: center;
-  margin: 0 20px;
+/* 
+section.summary h1{
+  font-size: 36px;
+} */
+
+section.summary .text{
+  margin: 20px 30px;
 }
 
-div.works{
-  min-height: 30vh;
-  display: flex;
-  justify-content: center;
+section.summary p{
+  max-width: 8em;
+}
+
+section.summary .contact{
   align-items: center;
-  flex-direction: column;
+  margin: 20px 30px;
 }
 
-div.works img{
-  max-width: 120px;
-}
-
-div.works img:hover{
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-div.works .imageWrapper{
-  margin: 0 10px;
-  padding-bottom: 4px;
-  /* border-radius: 5px; */
-  box-shadow: 2px 2px 10px #aaa;
-  overflow: hidden;
-}
-
-  /* box-shadow: 2px 2px 5px #aaf;
-  box-shadow: 2px 2px 5px #faa;
-  box-shadow: 2px 2px 5px #faf;
-  box-shadow: 2px 2px 5px #aff; */
-
-div.works > ul{
+section.summary dl{
   display: flex;
   flex-wrap: wrap;
-  max-width: 600px;
-  justify-content: space-between;
+  max-width: 10em;
 }
 
-div.works > ul h3{
-  font-weight: normal;
-  text-align: center;
+section.summary dl > dt{
+  width: 2em;
 }
 
-div.works > h2{
-  padding-bottom: 35px;
+section.summary dl > dd{
+  width: 8em;
 }
 
-div.skills{
-  min-height: 30vh;
-  background: rgba(240, 240, 240, 0.4);
+section.summary .contact > dl{
+  max-width: 11em;
+}
+
+section.summary .contact > dl > dt{
+  width: 2em;
+}
+
+section.summary .contact > dl > dd{
+  width: 9em;
+}
+
+/* experi */
+section.experi{
+  min-height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-div.skills > h2{
+@media (max-width: 420px){
+  section.experi{
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
+
+section.experi a{
+  color: #7986cb;
+  text-shadow: 2px 2px 3px #c5cae980;
+}
+
+section.experi a:hover{
+  color: #7986cbc0;
+}
+
+section.experi > h2{
   padding-bottom: 20px;
 }
 
-div.skills > ol{
+section.experi h3{
+  font-size: 12px;
+  line-height: 2;
+  padding: 0 10px;
+  color: #7986cb;
+  font-weight: normal;
+  transform: scale(0.8);
+}
+
+section.experi > ul{
   display: flex;
   flex-wrap: wrap;
+  max-width: 600px;
+  justify-content: center;
 }
 
-div.skills > ol > li{
-  max-width: 120px;
-  margin: 0 10px;
-  padding: 10px 8px;
-  border: 2px #ccc solid;
-  text-align: center;
+section.experi > ul > li{
+  max-width: 135px;
 }
 
-div.contacts{
-  min-height: 20vh;
+@media (max-width: 420px){
+  section.experi > ul > li{
+    margin: 20px 0;
+  }
+}
+
+section.experi .axis-item{
+  display: flex;
+  align-items: center;
+}
+
+section.experi .axis-dot{
+  width: 7px;
+  height: 7px;
+  background: #7986cb;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+section.experi > ul > li:hover .axis-dot{
+  transform: scale(1.5);
+  box-shadow: 0 0 8px 5px #9fa8da40;
+}
+
+section.experi .axis-line{
+  width: 120px;
+  height: 1.5px;
+  background: #c5cae9;
+  margin-left: 4px;
+}
+
+section.experi .text{
+  padding: 0 14px;
+  transform: scale(0.9);
+}
+
+/* works */
+section.works{
+  min-height: 25vh;
+  /* background: #f0f0f040; */
+  background: #e8eaf640;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-div.contacts > h2{
-  padding-bottom: 15px;
+@media (max-width: 420px){
+  section.works{
+    min-height: 100vh;
+    flex-direction: column;
+  }
 }
 
-div.contacts > dl{
+section.works > h2{
+  padding-bottom: 25px;
+}
+
+section.works .viewWrapper{
+  max-width: 260px;
+  margin: 10px 0;
+}
+
+section.works .viewWrapper img{
+  border-radius: 5px;
+}
+
+.hidden{
+  display: none;
+}
+
+/* .line{
+  width: 30px;
+  height: 3px;
+  background: #e8eaf6;
+  margin: 10px 0;
+} */
+
+section.works img.before{
+  max-width: 120px;
+}
+
+section.works > ul{
   display: flex;
   flex-wrap: wrap;
-  width: 12em;
+  max-width: 600px;
+  justify-content: center;
 }
 
-div.contacts > dl > dt{
-  width: 3em;
+section.works > ul > li{
+  margin: 10px;
+  padding-bottom: 4px;
+  border-radius: 5px;
+  background: #e8eaf660;
+  overflow: hidden;
+  transition: .3s;
 }
 
-div.contacts > dl > dd{
-  width: 9em;
+section.works > ul > li:hover{
+  opacity: 0.9;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px #aaa;
+}
+
+section.works > ul h3{
+  font-size: 12px;
+  line-height: 2;
+  color: #666;
+  font-weight: normal;
+  text-align: center;
+  transform: scale(0.9);
+}
+
+/* skills */
+section.skills{
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 420px){
+  section.skills{
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
+
+section.skills > h2{
+  padding-bottom: 20px;
+}
+
+section.skills h3,
+section.skills i{
+  color: #7986cb;
+}
+
+section.skills > ol{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  justify-content: center;
+}
+
+section.skills > ol > li{
+  max-width: 120px;
+  margin: 10px;
+  padding: 10px 8px;
+  border-radius: 5px;
+  /* border: 2px #9fa8da solid; */
+  background: #e8eaf650;
+  transition: .1s;
+  text-align: center;
+}
+
+section.skills .text{
+  transform: scale(0.9);
+}
+
+section.skills > ol > li:hover{
+  transform: scale(1.05);
+  background: #ffffff80;
+  box-shadow: 0 0 10px 5px #9fa8da40;
 }
